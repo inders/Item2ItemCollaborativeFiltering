@@ -33,7 +33,13 @@ public class SimpleGlobalItemScorer extends AbstractGlobalItemScorer {
         scores.fill(0);
         // TODO score items in the domain of scores
         // each item's score is the sum of its similarity to each item in items, if they are
-        // neighbors in the model.
+        // neighbors in the model
+        //
+        // .
+
+        System.out.println("Collections" + items.size());
+
+        System.out.println("scores" + scores.keySet());
 
         for (VectorEntry vectoryEntry : scores.fast()) {
             long item = vectoryEntry.getKey();
